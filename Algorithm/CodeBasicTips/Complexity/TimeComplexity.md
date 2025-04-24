@@ -4,27 +4,27 @@
 
 - 입력의 크기와 문제를 해결하는데 걸리는 시간의 상관 관계
     
-    ![image.png](image.png)
+    ![image.png](images/image.png)
     
     - 컴퓨터는 1초에 대략 3-5억개 정도의 연산을 처리할 수 있음
     - 5n + 3 → n에 비례한다라고 표현
     - 예시
         
-        ![image.png](image%201.png)
+        ![image.png](images/image%201.png)
         
-        ![image.png](image%202.png)
+        ![image.png](images/image%202.png)
         
 
 ## 빅오표기법 (Big-O Notation)
 
 - 주어진 식을 값이 가장 큰 대표항만 남겨서 나타내는 방법
     
-    ![image.png](image%203.png)
+    ![image.png](images/image%203.png)
     
     - 입력되는 N의 크기에 따른 허용 시간복잡도 (대략적인 정리, 절대적이지는 않음)
         - 문제 풀때 내 풀이가 제한시간 내로 통과될 수 있는지, 내 알고리즘의 시간복잡도가 올바른지 꼭 생각하고 코딩해야 시간 낭비 안함
         
-        ![image.png](image%204.png)
+        ![image.png](images/image%204.png)
         
 
 ## 문제
@@ -33,7 +33,7 @@
     
     ### 문제 1
     
-    ![image.png](658c6f25-9aaa-440c-bb3e-9e3bc090fd1e.png)
+    ![image.png](images/658c6f25-9aaa-440c-bb3e-9e3bc090fd1e.png)
     
     - 시간복잡도 : O(n)
     - 코드
@@ -55,7 +55,7 @@
     
     ### 문제 2
     
-    ![image.png](image%205.png)
+    ![image.png](images/image%205.png)
     
     - 시간복잡도  O(n^2) - 내가 푼 방법
         - 이중 for문 사용
@@ -133,7 +133,7 @@
     
     ### 문제 3
     
-    ![image.png](image%206.png)
+    ![image.png](images/image%206.png)
     
     - 시간복잡도 O($\sqrt{n}$)
         - i * i 가 N 넘지 않을만큼만 순회
@@ -158,7 +158,7 @@
     
     ### 문제 4
     
-    ![image.png](image%207.png)
+    ![image.png](images/image%207.png)
     
     - 시간복잡도 O(logN)
         - N이 $2^k$ 이상 $2^{K+1}$ 미만 이므로 O(k) →  로그의 정의에 입각해서 k는 logN
@@ -200,27 +200,3 @@
         
             }
         ```
-        
-
----
-
-## 공간복잡도 (Space Complexity)
-
-- 입력의 크기와 문제를 해결하는데 필요한 공간의 상관관계
-    - 예시
-        - 크기 N짜리 2차원 배열이 필요하면 O($N^2$)
-        - 따로 배열 필요없으면 O(1)
-    - 문제 메모리 제한 확인해서 풀기
-        - 메모리 제한이 512MB =  1.2억개 int 변수 선언 가능
-            - int 하나가 4바이트 이므로
-        - 크기 5억인 int배열을 사용한 풀이를 생각했다면 메모리 제한 만족 못하므로 다른 풀이 구상
-            - 5억 * 4바이트 = 2,000,000,000바이트 ≈ 1.86GB
-        - 참고
-            
-            **단위 변환**
-            
-            - **1Byte**
-            - **1KB = 1024B**
-            - **1MB = 1024KB = 1,048,576B**
-            - **1GB = 1024MB = 1,073,741,824B**
-    - 코딩테스트에서 대부분은 시간복잡도 문제로 틀리긴함
